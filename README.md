@@ -1,27 +1,53 @@
-# TemparatureTracker
+# Temperature Tracker Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+This is a **Temperature Tracker Application** built using **Angular** and **Chart.js**. The application allows users to input temperature data with corresponding datetime values and view this data in a dynamic bar chart.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Add Temperature Data**: Users can add temperature data with a datetime value.
+- **View Data**: Displays the added data in a list.
+- **Dynamic Chart**: Displays temperature data over time using a chart that updates dynamically as new data is added.
+- **Form Validation**: Ensures valid temperature ranges and datetime input.
+- **Real-time Updates**: Updates the chart automatically when new data is added.
 
-## Code scaffolding
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Angular**: Frontend framework for building the application.
+- **Chart.js**: Library for rendering charts.
+- **Angular Material**: UI component library for a modern, responsive UI.
+- **RxJS**: For managing real-time data updates with `BehaviorSubject`.
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Follow these instructions to set up and run the project locally.
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [Node.js](https://nodejs.org/) (v14 or later)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Angular CLI](https://angular.io/cli)
 
-## Running end-to-end tests
+### Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. **Clone the repository:**
 
-## Further help
+   ```bash
+   git clone https://github.com/your-username/temperature-tracker-app.git
+   cd temperature-tracker-app
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+2. **Install dependencies:**
+
+    ```bash
+    npm install
+
+3. **Run the application:**
+
+    ```bash
+    ng serve
+    The app will be running on http://localhost:4200.
+   
+### Usage
+
+- **Adding Data**: Input the `datetime` and `temperature` in the form.
+- **Viewing Data**: The added entries will be shown in the list.
+- **Chart**: The temperature data will be plotted on a bar chart, which updates dynamically with new entries.
