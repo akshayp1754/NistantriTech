@@ -32,7 +32,7 @@ Follow these instructions to set up and run the project locally.
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/temperature-tracker-app.git
+   git clone https://github.com/akshayp1754/NistantriTech.git 
    cd temperature-tracker-app
 
 2. **Install dependencies:**
