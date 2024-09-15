@@ -1,0 +1,7 @@
+/* view-data.component.css */
+canvas {
+    display: block;
+    width: 100%; /* or specify a fixed width, like 600px */
+    height: 400px; /* or specify a fixed height */
+  }
+  

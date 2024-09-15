@@ -1,0 +1,53 @@
+<!-- Add Data Form -->
+<mat-card class="form-card">
+  <mat-card-title>Add Temperature Data</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Datetime</mat-label>
+        <input
+          matInput
+          type="datetime-local"
+          formControlName="datetime"
+          placeholder="Datetime"
+        />
+        <mat-error *ngIf="dataForm.controls['datetime'].hasError('pastDate')"
+          >Datetime must be in the past</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Temperature</mat-label>
+        <input
+          matInput
+          type="number"
+          formControlName="temperature"
+          placeholder="Temperature"
+        />
+        <mat-error *ngIf="dataForm.controls['temperature'].hasError('range')"
+          >Temperature must be between -50 and 50 degrees Celsius</mat-error
+        >
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="dataForm.invalid"
+      >
+        Add Data
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="list-card" *ngIf="(dataService.dataEntries$ | async)?.length">
+  <mat-card-title>Data Entries</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let entry of dataService.dataEntries$ | async">
+        {{ entry.datetime }} - {{ entry.temperature }}°C
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

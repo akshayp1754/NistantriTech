@@ -1,0 +1,41 @@
+/* add-data.component.css */
+.form-card, .list-card {
+    margin: 20px;
+    padding: 20px;
+   
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+  }
+  
+  .form-card {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 25px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 7px;
+  }
+  
+  .mat-list-item {
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .list-card {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  mat-card-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
